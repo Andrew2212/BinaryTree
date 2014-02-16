@@ -91,12 +91,12 @@ public class Node<T1 extends Comparable<T1>, T2> {
         count.incrementAndGet();
     }
 
-    public void setLeft(Node<T1, T2> left) {
+    private void setLeft(Node<T1, T2> left) {
         this.left = left;
         print("Node::setLeft()::left = " + left);
     }
 
-    public void setRight(Node<T1, T2> right) {
+    private void setRight(Node<T1, T2> right) {
         this.right = right;
         print("Node::setRight()::right = " + right);
     }
