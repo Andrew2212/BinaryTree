@@ -32,7 +32,7 @@ public class Node<T1 extends Comparable<T1>, T2> {
                 '}';
     }
 
-    public void add(T1 key, T2 value) {
+    public void addNextNode(T1 key, T2 value) {
 
         int compare = key.compareTo(getKey());
 
@@ -46,7 +46,7 @@ public class Node<T1 extends Comparable<T1>, T2> {
         if (compare < 0) {
             nodeNext = getLeft();
             if (nodeNext != null) {
-                nodeNext.add(key, value);
+                nodeNext.addNextNode(key, value);
             } else {
                 setLeft(new Node<T1, T2>(key, value));
             }
@@ -55,7 +55,7 @@ public class Node<T1 extends Comparable<T1>, T2> {
         if (compare > 0) {
             nodeNext = getRight();
             if (nodeNext != null) {
-                nodeNext.add(key, value);
+                nodeNext.addNextNode(key, value);
             } else {
                 setRight(new Node<T1, T2>(key, value));
             }

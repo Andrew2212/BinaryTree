@@ -38,11 +38,11 @@ public class BTree<T1 extends Comparable<T1>, T2> {
 
         if (nodeRoot == null) {
             nodeRoot = new Node<T1, T2>(key, value);
-            print("BTree::add()::nodeRoot = new Node(key, value)::" + nodeRoot);
+            print("BTree::addNextNode()::nodeRoot = new Node(key, value)::" + nodeRoot);
             return;
         }
 
-        nodeRoot.add(key, value);
+        nodeRoot.addNextNode(key, value);
     }
 
     /**
